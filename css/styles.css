@@ -204,7 +204,7 @@ img {
   text-transform: uppercase;
 }
 /*button*/
-.hero .hero-button {
+.hero-button {
   display: block;
   margin: 0 auto;
   border: transparent;
@@ -218,6 +218,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.86;
+  letter-spacing: 0.06em;
   text-align: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -636,6 +637,60 @@ img {
 .welcome-soc-link:focus {
   background-color: var(--accent-text-color);
 }
+
+/*------------subscribe--------*/
+.subscribe-field {
+  margin-left: 93px;
+}
+.email-label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--hero-text-color);
+}
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submit-icon {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-input-icon {
+  fill: var(--hero-text-color);
+  right: 28px;
+}
+.subscribe-field-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*----------modal------------------*/
 
 .is-hidden {
@@ -660,7 +715,7 @@ img {
   width: 100%;
   position: absolute;
   max-width: 528px;
-  height: 581px;
+
   background-color: rgba(255, 255, 255, 1);
   position: absolute;
   top: 50%;
@@ -668,6 +723,7 @@ img {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
 }
 .modal-close-btn {
   position: absolute;
@@ -684,5 +740,108 @@ img {
   cursor: pointer;
 }
 .close-button {
-  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:hover .close-button,
+.modal-close-btn:focus .close-button {
+  fill: var(--accent-text-color);
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-text-color);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  padding-left: 42px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-field {
+  margin-bottom: 10px;
+}
+.modal-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 4px;
+
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 12px 16px;
+}
+.modal-input:focus + .input-icon {
+  fill: var(--accent-text-color);
+}
+.modal-input:focus,
+.modal-comment:focus {
+  border: 1px solid var(--accent-text-color);
+}
+.input-wrap {
+  position: relative;
+}
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.modal-policy {
+  margin-bottom: 30px;
+}
+.modal-policy-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+.modal-link {
+  color: var(--accent-text-color);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-text-color);
+}
+.modal-custom-check {
+  border: 2px solid var(--main-text-color);
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+}
+.modal-check:checked + .modal-custom-check {
+  border: 2px solid var(--accent-text-color);
+  background-color: var(--accent-text-color);
+}
+
+.modal-check:focus + .modal-custom-check {
+  border: 2px solid var(--accent-text-color);
 }
