@@ -771,6 +771,9 @@ img {
 .modal-field {
   margin-bottom: 10px;
 }
+.modal-field-coment {
+  margin-bottom: 20px;
+}
 .modal-comment::placeholder {
   font-weight: 400;
   font-size: 12px;
